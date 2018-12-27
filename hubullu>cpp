@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+ 
+int main()
+{	int  t;
+	
+	cin>>t;
+	while(t--)
+	{	ll n,l,r;
+		scanf("%lld %lld",&l,&r);
+ 		if(r)
+         		printf("Pagfloyd wins.\n");
+      		else
+        		 printf("Airborne wins.\n");
+   	}
+   return 0;
+}
