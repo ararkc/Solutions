@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+ 
+using namespace std;
+vector<long long int> v;
+
+long long int rec(long long int n)
+{	if(n<=100000000)
+		return v[n];
+		return(max(n,rec(n/2)+rec(n/3)+rec(n/4)));
+	
+}
+ 
+int main()
+{	 long long int i,n,x,t=10;
+	for(i=0;i<100000000;i++)
+	{	
+		v.push_back(i);
+			
+	}
+	
+	for(i=0;i<100000000;i++)
+	{	
+		v[i]=(max(v[i],v[i/2]+v[i/3]+v[i/4]));
+		
+	}
+		
+	while((t--)&&cin>>n)
+	{	
+	
+		if(n>100000000)
+			x=rec(n);
+		else
+			x=v[n];
+	
+		
+		cout<<x<<endl;
+	}
+	
+	
+	return 0;	
+	
+}
