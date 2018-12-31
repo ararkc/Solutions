@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+ using namespace std; 
+ typedef long long int ll;
+  
+int main() 
+{ 
+    	ll t;
+	cin>>t;
+	while(t--)
+	{	ll n,i,count=0;
+		map<string,ll> map;
+		string s1,s2,s3,s4,s5,s6,s,s7;
+		scanf("%lld",&n);
+		for(i=0;i<n;i++)
+		{	string s;
+			cin>>s1>>s2>>s3>>s4>>s5>>s6;
+
+			for(auto it=s1.begin();it!=s1.end();it++)
+			{	s.push_back(*it);
+			}
+			for(auto it=s2.begin();it!=s2.end();it++)
+			{	s.push_back(*it);
+			}
+			for(auto it=s3.begin();it!=s3.end();it++)
+			{	s.push_back(*it);
+			}
+			for(auto it=s4.begin();it!=s4.end();it++)
+			{	s.push_back(*it);
+			}
+			
+			for(auto it=s5.begin();it!=s5.end();it++)
+			{	s.push_back(*it);
+			}
+			for(auto it=s6.begin();it!=s6.end();it++)
+			{	s.push_back(*it);
+			}
+			map[s]++;
+			
+				
+		}
+		for (auto i = map.begin(); i != map.end(); i++) {count=0; string ss=i->first;
+		for(auto it=ss.begin();it!=ss.end();it++)
+		{	count++;
+			printf("%c",*it);
+			if(count==2||count==10||count==14||count==18||count==22||count==26)
+				printf(" ");
+		}
+      cout<<" "<< i->second << '\n';
+	}
+     
+    } 
+}  
