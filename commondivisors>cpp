@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+ 
+int main()
+{	int  t;
+	
+	cin>>t;
+	while(t--)
+	{	ll a,b,c,count=0,i;
+		scanf("%lld %lld",&a,&b);
+		c=__gcd(a,b);
+		for(i=1;i*i<=c;i++)
+		{	if(i*i==c&&c%i==0)
+				count++;
+			else if(c%i==0)
+				count+=2;
+			
+		}
+		printf("%lld\n",count);
+		
+   	}
+   return 0;
+}
